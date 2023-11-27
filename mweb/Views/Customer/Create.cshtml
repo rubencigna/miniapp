@@ -1,0 +1,35 @@
+@{
+    ViewData["Title"] = "Create Customer Page";
+}
+
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-4 text-gray-800">Create Customer</h1>
+    <!--Content Row-->
+    <div class="row">
+        <!--Content Column-->
+        <div class="col-lg-3 mb-4">
+            <!--your content here-->
+            <form asp-controller="Customer" asp-action="Submit" method="post">
+                @Html.AntiForgeryToken()
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="enter customer name">
+                    <label for="name">Customer Name</label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="email" name="email" placeholder="enter customer email">
+                    <label for="name">Email</label>
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="phone" name="phone" placeholder="enter customer phone">
+                    <label for="name">Phone</label>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary float-right">Submit</button>
+                <button asp-action="Index" asp-controller="Customer" class="btn btn-secondary">Back</button>
+            </form>
+        </div>
+    </div>
+
+</div>

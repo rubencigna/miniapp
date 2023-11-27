@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "Submit Page";
+}
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-4 text-gray-800">Delete Customer</h1>
+    <!--Content Row-->
+    <div class="row">
+        <!--Content Column-->
+        <div class="col-lg-6 mb-4">
+            <!--your content here-->
+            <div class="alert alert-danger">
+                <h1>Delete</h1>
+                <p>Are you sure want to delete this record ?</p>
+            </div>
+            <form asp-action="Delete" asp-controller="Customer" method="post">
+                @Html.AntiForgeryToken()
+                <input type="text" name="id" class="form-control" placeholder="verify customer id">
+                <br>
+                <button class="btn btn-danger float right">Delete</button>
+                <a asp-action="Index" asp-controller="Customer" class="btn btn-secondary">Back</a>
+            </form>
+
+        </div>
+    </div>
+
+</div>

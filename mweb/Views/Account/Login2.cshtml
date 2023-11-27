@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Login2 Page";
+}
+
+@* <div class="container-fluid">
+
+<!-- Page Heading -->
+<h1 class="h3 mb-4 text-gray-800">Login 2</h1>
+<!--Content Row-->
+<div class="row">
+<!--Content Column-->
+<div class="col-lg-6 mb-4">
+<!--your content here-->
+<form asp-controller="Account" asp-action="Login" method="post">
+@Html.AntiForgeryToken()
+<div class="form-floating">
+<input type="text" class="form-control" id="username" name="username"
+placeholder="name@example.com">
+<label for="username">Username</label>
+</div>
+<div class="form-floating">
+<input type="password" class="form-control" id="password" name="password" placeholder="Password">
+<label for="password">Password</label>
+</div>
+<br>
+<button type="submit" class="btn btn-primary">Submit</button>
+<button asp-action="Index" asp-controller="Home" class="btn btn-secondary float-right">Home</button>
+</form>
+</div>
+</div>
+</div> *@
+
+<form class="user" asp-action="Login2" asp-controller="Account" method="post">
+    <div class="form-group">
+        <input type="text" class="form-control form-control-user" id="username" name="username" aria-describedby="emailHelp"
+            placeholder="Enter Username...">
+    </div>
+    <div class="form-group">
+        <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">
+    </div>
+    <div class="form-group">
+        <div class="custom-control custom-checkbox small">
+            <input type="checkbox" class="custom-control-input" id="customCheck">
+            <label class="custom-control-label" for="customCheck">Remember
+                Me</label>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary btn-user btn-block">
+        Login
+    </button>
+    <hr>
+    <a asp-action="LoginWithGoogle" asp-controller="Account" class="btn btn-google btn-user btn-block">
+        <i class="fab fa-google fa-fw"></i> Login with Google
+    </a>
+    <a asp-action="LoginWithFacebook" asp-controller="Account" class="btn btn-facebook btn-user btn-block">
+        <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
+    </a>
+</form>

@@ -1,0 +1,32 @@
+@mapi_HostAddress = http://localhost:5105
+
+GET {{mapi_HostAddress}}/todos/
+Accept: application/json
+
+###
+
+GET {{mapi_HostAddress}}/todos/1
+Accept: application/json
+
+###
+
+POST {{mapi_HostAddress}}/ping/ HTTP/1.1
+Accept: "application/json"
+Content-Type: "application/json"
+{
+    "Id":1,
+    "Title":"test", 
+    "DueBy" : null,
+    "IsComplete": false
+}
+
+###
+
+POST {{mapi_HostAddress}}/Api/Customer/GetAll.do HTTP/1.1
+Accept: "application/json"
+Content-Type: "application/json"
+
+{
+    "Id":1,
+    "Message":"test", 
+}
