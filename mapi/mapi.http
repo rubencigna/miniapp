@@ -11,8 +11,9 @@ Accept: application/json
 ###
 
 POST {{mapi_HostAddress}}/ping/ HTTP/1.1
-Accept: "application/json"
-Content-Type: "application/json"
+Accept: application/json
+Content-Type: application/json
+
 {
     "Id":1,
     "Title":"test", 
@@ -22,11 +23,24 @@ Content-Type: "application/json"
 
 ###
 
-POST {{mapi_HostAddress}}/Api/Customer/GetAll.do HTTP/1.1
-Accept: "application/json"
-Content-Type: "application/json"
+POST {{mapi_HostAddress}}/Api/Customer/GetAll.do/ HTTP/1.1
+Accept: application/json
+Content-Type: application/json
 
 {
     "Id":1,
-    "Message":"test", 
+    "Message":"test"
 }
+
+###
+
+POST {{mapi_HostAddress}}/Api/Customer/Create.do/ HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "admin2",
+    "email": "admin2@gmail.com",
+    "phone": "1"
+}
+
